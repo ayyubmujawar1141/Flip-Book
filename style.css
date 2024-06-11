@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+body{
+    margin: 0%;
+    padding: 0%;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Source Code Pro", monospace;
+    background: linear-gradient(90deg,#262020 40%,#898585 60%);
+}
+input{
+    display: none;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.book{
+    display: flex;
+}
+.dream{
+    width: 275px;
+    height: 400px;
+    color: #262020;
+}
+#cover{
+    width: 275px;
+    height: 400px;
+}
+.flip-book{
+    width: 275px;
+    height: 400px;
+    position: relative;
+    perspective: 1500px;
+}
+.flip{
+    height:100%;
+    width:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: 0.5s;
+    color: #262020;
+}
+p{
+    font-size: 14px;
+    line-height: 24px;
+    color: #fff;
+
+}
+.heading{
+    font-size: 50px;
+    font-family:'Courier New', Courier, monospace;
+    color: #ffffff;
+}
+.front{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #493737;
+    box-sizing: border-box;
+    padding: 0px 13px;
+}
+.back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    background-color: #000;
+}
+.next-btn{
+    position: absolute;
+    bottom: 13px;
+    right: 13px;
+    cursor: pointer;
+    color: #ffffff;
+}
+.back-btn{
+    position: absolute;
+    bottom: 13px;
+    right: 13px;
+    cursor: pointer;
+    color: #fff;
+}
+#p1{
+    z-index: 9;
+}
+#p2{
+    z-index: 8;
+}
+#p3{
+    z-index: 7;
+}
+#p4{
+    z-index: 6;
+}
+#p5{
+    z-index: 5;
+}
+#p6{
+    z-index: 4;
+}
+#c1:checked ~.flip-book #p1{
+    transform: rotateY(-180deg);
+    z-index: 1;
+}
+#c2:checked ~.flip-book #p2{
+    transform: rotateY(-180deg);
+    z-index: 2;
+}
+#c3:checked ~.flip-book #p3{
+    transform: rotateY(-180deg);
+    z-index: 3;
+}
+#c4:checked ~.flip-book #p4{
+    transform: rotateY(-180deg);
+    z-index: 4;
+}#c5:checked ~.flip-book #p5{
+    transform: rotateY(-180deg);
+    z-index: 5;
+}#c6:checked ~.flip-book #p6{
+    transform: rotateY(-180deg);
+    z-index: 6;
+}
